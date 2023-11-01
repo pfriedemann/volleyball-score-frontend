@@ -1,0 +1,35 @@
+.game-container {
+  position: relative;
+  background-color: #00000000;
+  width: 100%;
+  height: 98vh;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.show {
+  opacity: 1 !important;
+}
+
+.history {
+  opacity: 0;
+  transition: opacity 1s linear;
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+}
+
+.overview {
+  opacity: 0;
+  transition: opacity 1s linear;
+}
+
+.scoreboard {
+  opacity: 0;
+  transition: opacity 1s linear;
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+}

@@ -1,0 +1,74 @@
+.history-container {
+  width: 210px;
+  border: 5px solid #034a6f;
+  border-radius: 2px;
+}
+
+.history-entry .history-image {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  background: white;
+}
+
+.history-entry {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: white;
+  background-color: #034a6f;
+}
+
+.history-team1 {
+  display: flex;
+  justify-content: center;
+}
+.history-team2 {
+  display: flex;
+  justify-content: center;
+}
+
+.history-header {
+  background-color: #034a6f;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.history-score {
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.history-score-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #034a6f;
+}
+
+.history-score-row {
+  width: 100%;
+  height: 60px;
+  .score-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.left {
+      border-right: 2px solid white;
+    }
+    &.right {
+      border-left: 2px solid white;
+    }
+  }
+}

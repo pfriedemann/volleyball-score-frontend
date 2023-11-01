@@ -1,0 +1,89 @@
+.scoreboard-container {
+  width: 375px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  border: 4px solid #034a6f;
+  font-weight: bold;
+  font-size: 40px;
+  background-color: white;
+}
+
+.score-team {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score-logo {
+  height: 110px;
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.score-logo img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.score-points {
+  height: 100%;
+  width: 30%;
+  background-color: #034a6f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.score-points span {
+  border: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 70px;
+  height: 70px;
+}
+
+.team-1 {
+  border-bottom: 2px solid white;
+}
+
+.team-2 {
+  border-top: 2px solid white;
+}
+
+.serve-container {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #034a6f;
+  height: 100%;
+}
+
+.serve-indicator {
+  background-color: #ffb818;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.score-set {
+  color: lightgray;
+  font-size: 2em;
+  width: 30%;
+  background-color: #034a6f;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
