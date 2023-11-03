@@ -7,10 +7,13 @@ export default defineConfig({
   server: {
     port: 3000,
     proxy: {
-      "/all": { target: "http://localhost:3001", changeOrigin: true },
-      "/test-backend": { target: "http://localhost:3001", changeOrigin: true },
+      "/all": { target: "http://paul-friedemann.de:3000", changeOrigin: true },
+      "/test-backend": {
+        target: "http://paul-friedemann.de:3000",
+        changeOrigin: true,
+      },
       "/ws": {
-        target: "ws://localhost:3001",
+        target: "ws://paul-friedemann.de:3000",
         ws: true,
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/ws/, ""),

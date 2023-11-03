@@ -43,14 +43,14 @@ export function GameView() {
   const [showScoreboard, setShowScoreboard] = useState(true);
 
   useEffect(() => {
-    fetch("https://paul-friedemann.de:3000/all")
+    fetch("http://paul-friedemann.de:3000/all")
       .then((res) => res.json())
-      .then((data: AllData[]) =>
-        setGames(data.map((d) => ({ ...d, setScores: [] })))
-      );
+      .then((data: AllData[]) => {
+        setGames(data.map((d) => ({ ...d, setScores: [] })));
+      });
   }, []);
 
-  useWebSocket("ws://paul-friedemann.de:3000/ws", {
+  useWebSocket("ws://paul-friedemann.de:3000", {
     onOpen: () => console.log("Opened Socket"),
     onMessage: (message) => {
       const parsedMessage = JSON.parse(message.data);

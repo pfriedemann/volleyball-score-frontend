@@ -18,13 +18,13 @@ const router = createBrowserRouter([
         element: <GameView />,
         errorElement: <ErrorBoundary />,
       },
-      {
-        path: "test",
-        index: true,
-        element: <TestView />,
-        errorElement: <ErrorBoundary />,
-      },
     ],
+  },
+  {
+    path: "test",
+    index: true,
+    element: <TestView />,
+    errorElement: <ErrorBoundary />,
   },
 ]);
 
