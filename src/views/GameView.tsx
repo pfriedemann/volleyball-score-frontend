@@ -43,7 +43,9 @@ export function GameView() {
   const [showScoreboard, setShowScoreboard] = useState(true);
 
   useEffect(() => {
-    fetch("http://paul-friedemann.de:3000/all")
+    fetch("http://paul-friedemann.de:3000/all", {
+      referrerPolicy: "unsafe-url",
+    })
       .then((res) => res.json())
       .then((data: AllData[]) => {
         setGames(data.map((d) => ({ ...d, setScores: [] })));
