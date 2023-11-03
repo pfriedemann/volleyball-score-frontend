@@ -14,6 +14,7 @@ import { History } from "../components/history/History";
 
 import "./GameView.css";
 import useWebSocket from "react-use-websocket";
+import { times } from "lodash";
 
 type AllData = {
   id: string;
@@ -81,9 +82,15 @@ export function GameView() {
   const shownGame = gameNumber >= 0 ? games[gameNumber] : undefined;
 
   if (!shownGame) return;
+
+  const testHistory = times(10, (i) => ({
+    points: i + 10 + "",
+    team: `team${Math.round(Math.random() + 1)}`,
+  })) as HistoryEntry[];
+
   return (
     <div className="game-container">
-      <div className={`overview ${showGameStats ? "show" : ""}`}>
+      <div className={`overview show ${showGameStats ? "show" : ""}`}>
         <GameOverview
           team1={{
             logo: shownGame.team1.logoImage200 ?? "",
@@ -101,7 +108,7 @@ export function GameView() {
           }}
         />
       </div>
-      <div className={`scoreboard ${showScoreboard ? "show" : ""}`}>
+      <div className={`scoreboard show ${showScoreboard ? "show" : ""}`}>
         <Scoreboard
           team1={{
             matchPoints: shownGame.setPoints.team1,
@@ -117,9 +124,9 @@ export function GameView() {
           }}
         />
       </div>
-      <div className={`history ${isHistoryVisible ? "show" : ""}`}>
+      <div className={`history show ${isHistoryVisible ? "show" : ""}`}>
         <History
-          history={shownHistory ?? []}
+          history={shownHistory ?? testHistory}
           teamLogos={{
             team1: shownGame.team1.logoImage200,
             team2: shownGame.team2.logoImage200,

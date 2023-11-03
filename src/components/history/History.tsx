@@ -11,7 +11,7 @@ export function History(props: Props) {
   return (
     <div className="history-container">
       <div className="history-header">Letzten 10 Punkte</div>
-      <div className="history-entry">
+      <div className="history-entry history-image-container">
         <img
           alt="logo-team1"
           className="history-image"

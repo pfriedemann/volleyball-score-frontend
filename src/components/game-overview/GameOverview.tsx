@@ -14,25 +14,29 @@ type Props = {
 
 export default function GameOverview(props: Props) {
   const { team1, team2 } = props;
+
+  const team1Actual = { ...team1, matchPoints: 3, sets: [25, 25, 20, 25] };
+  const team2Actual = { ...team2, matchPoints: 1, sets: [22, 20, 25, 15] };
+
   return (
     <div className="container">
       <div className="team1 team-row">
         <div className="logo">
           <img alt="logo-team1" src={team1.logo}></img>
         </div>
-        <div className="match-score">{team1.matchPoints}</div>
+        <div className="match-score">{team1Actual.matchPoints}</div>
         <div className="set-scores">
-          {team1.sets.map((points, index) => (
+          {team1Actual.sets.map((points, index) => (
             <div
               className={`set-points ${
-                points > team2.sets[index] ? "winner" : ""
+                points > team2Actual.sets[index] ? "winner" : ""
               }`}
               key={index}
             >
               {points}
             </div>
           ))}
-          {times(5 - team2.sets.length, (i) => (
+          {times(5 - team2Actual.sets.length, (i) => (
             <div key={i} className="set-points hidden">
               0
             </div>
@@ -54,19 +58,19 @@ export default function GameOverview(props: Props) {
         <div className="logo">
           <img alt="logo-team2" src={team2.logo}></img>
         </div>
-        <div className="match-score">{team2.matchPoints}</div>
+        <div className="match-score">{team2Actual.matchPoints}</div>
         <div className="set-scores">
-          {team2.sets.map((points, index) => (
+          {team2Actual.sets.map((points, index) => (
             <div
               className={`set-points ${
-                points > team1.sets[index] ? "winner" : ""
+                points > team1Actual.sets[index] ? "winner" : ""
               }`}
               key={index}
             >
               {points}
             </div>
           ))}
-          {times(5 - team2.sets.length, (i) => (
+          {times(5 - team2Actual.sets.length, (i) => (
             <div key={i} className="set-points hidden">
               0
             </div>

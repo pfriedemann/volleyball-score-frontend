@@ -1,14 +1,22 @@
 .history-container {
-  width: 210px;
+  width: 10.5vw;
   border: 5px solid #034a6f;
   border-radius: 2px;
 }
 
 .history-entry .history-image {
-  height: 100px;
-  width: 100px;
+  height: 10vh;
+  width: 4.8vw;
   object-fit: contain;
   background: white;
+}
+
+.history-image-container {
+  box-sizing: border-box;
+  padding: 0.2em;
+  width: 100%;
+  background-color: white !important;
+  overflow: hidden;
 }
 
 .history-entry {
@@ -32,17 +40,17 @@
   background-color: #034a6f;
   color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 2vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .history-score {
-  width: 50px;
-  height: 50px;
+  width: 2.5vw;
+  height: 2.5vw;
   border: 1px solid white;
-  font-size: 24px;
+  font-size: 2vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +65,7 @@
 
 .history-score-row {
   width: 100%;
-  height: 60px;
+  height: 5.5vh;
   .score-container {
     width: 50%;
     height: 100%;

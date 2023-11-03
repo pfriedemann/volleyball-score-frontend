@@ -1,6 +1,6 @@
 .scoreboard-container {
-  width: 375px;
-  height: 220px;
+  width: 19.5vw;
+  height: 23vh;
   display: flex;
   flex-direction: column;
   border: 4px solid #034a6f;
@@ -18,8 +18,8 @@
 }
 
 .score-logo {
-  height: 110px;
-  width: 110px;
+  height: 5.7vw;
+  width: 5.7vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,8 +27,8 @@
 }
 
 .score-logo img {
-  width: 100px;
-  height: 100px;
+  width: 5vw;
+  height: 5vw;
   object-fit: contain;
 }
 
@@ -49,8 +49,8 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 70px;
-  height: 70px;
+  width: 3.6vw;
+  height: 3.6vw;
 }
 
 .team-1 {
@@ -72,8 +72,8 @@
 
 .serve-indicator {
   background-color: #ffb818;
-  width: 20px;
-  height: 20px;
+  width: 1vw;
+  height: 1vw;
   border-radius: 10px;
 }
 

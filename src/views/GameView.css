@@ -1,7 +1,7 @@
 .game-container {
   position: relative;
   background-color: #00000000;
-  width: 100%;
+  width: 98vw;
   height: 98vh;
   display: flex;
   overflow: hidden;
@@ -17,8 +17,8 @@
   opacity: 0;
   transition: opacity 1s linear;
   position: absolute;
-  right: 25px;
-  bottom: 25px;
+  right: 1vw;
+  bottom: 1vh;
 }
 
 .overview {
@@ -30,6 +30,6 @@
   opacity: 0;
   transition: opacity 1s linear;
   position: absolute;
-  bottom: 25px;
-  left: 25px;
+  bottom: 1vh;
+  left: 1vw;
 }
