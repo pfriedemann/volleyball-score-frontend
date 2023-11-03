@@ -35,7 +35,6 @@ export default function Scoreboard(props: Props) {
         </div>
         <div className="score-set">{team2.matchPoints}</div>
         <div className="serve-container">
-          <div className="serve-indicator" />
           {team2.serving ? <div className="serve-indicator"></div> : null}
         </div>
         <div className="score-points">
