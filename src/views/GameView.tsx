@@ -152,19 +152,21 @@ export function GameView() {
     matchId: string;
     sets: Set[];
   }) {
-    setGames((games) =>
-      games.map((game) =>
-        game.id === data.matchId
-          ? { ...game, setPoints: data.setPoints, setScores: data.sets }
-          : game
-      )
-    );
-    setShowGameStats(true);
-    setShowScoreboard(false);
     setTimeout(() => {
-      setShowGameStats(false);
-      setShowScoreboard(true);
-    }, 10000);
+      setGames((games) =>
+        games.map((game) =>
+          game.id === data.matchId
+            ? { ...game, setPoints: data.setPoints, setScores: data.sets }
+            : game
+        )
+      );
+      setShowGameStats(true);
+      setShowScoreboard(false);
+      setTimeout(() => {
+        setShowGameStats(false);
+        setShowScoreboard(true);
+      }, 10000);
+    }, 15000);
   }
 
   function handleStateUpdate(data: { gameState: MatchState; matchId: string }) {
