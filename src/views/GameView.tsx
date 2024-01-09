@@ -52,6 +52,7 @@ export function GameView() {
 
   useWebSocket("ws://paul-friedemann.de:3000", {
     onOpen: () => console.log("Opened Socket"),
+    shouldReconnect: () => true,
     onMessage: (message) => {
       const parsedMessage = JSON.parse(message.data);
       switch (parsedMessage.type) {
@@ -152,6 +153,10 @@ export function GameView() {
     matchId: string;
     sets: Set[];
   }) {
+    let delay = 15000;
+    if (data.setPoints.team1 === 3 || data.setPoints.team2 === 3) {
+      delay = 30000;
+    }
     setTimeout(() => {
       setGames((games) =>
         games.map((game) =>
@@ -166,7 +171,7 @@ export function GameView() {
         setShowGameStats(false);
         setShowScoreboard(true);
       }, 10000);
-    }, 15000);
+    }, delay);
   }
 
   function handleStateUpdate(data: { gameState: MatchState; matchId: string }) {
